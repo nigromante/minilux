@@ -1,8 +1,9 @@
-# minilux — A small, multipurpose programming language
+# minilux
+## A small, multipurpose programming language
 
 ![minilux logo](minilux.png)
 
----
+
 
 ## About
 
@@ -56,9 +57,10 @@ make install
 
 This installs `minilux` to `/usr/bin`, allowing you to run scripts directly with a shebang.
 
-**Important** to build on mac, edit the Makefile and change the path to /usr/local/bin
+**mac users:** to build on macOS, edit the Makefile and change the path to /usr/local/bin
 
-To uninstall run ```make uninstall``
+To uninstall run 
+```make uninstall``
 
 ### Rebuild
 remove the target/ dir completely (```rm -rf target/```), and then:
@@ -225,9 +227,9 @@ Escape sequences:
 Read a line from standard input (without the trailing newline) and store it in a variable:
 
 ```minilux
-printf("What is your name?\n")
+printf("What is your name?")
 read($name)
-printf("Hello ", $name, "!\n")
+printf("Hello ", $name, "!)
 ```
 
 #### len()
@@ -245,7 +247,7 @@ printf("Array length: ", len($arr), "\n")  # 3
 #### number()
 
 Convert strings (or existing integers) into numeric values for arithmetic:
-IMPORTANT: parser fails return 0 (e.g: giving a non-numeric value for example number(hello))
+**IMPORTANT:** parser fails return 0 (e.g: giving a non-numeric value for example number(hello))
 
 ```minilux
 read($input)
@@ -443,9 +445,9 @@ This implementation was rewritten from C to Rust to provide:
 ## Author
 
 **Alexia Michelle**  
-✉️ <alexia@goldendoglinux.org>
+✉️ <alexia@minilux.org>
 
-## License
+## License - MPL 2.0
 
 See LICENSE file for details.
 
