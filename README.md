@@ -1,10 +1,6 @@
 # minilux — A small, multipurpose programming language
 
-<div align="center">
-  <img src="minilux.png" alt="minilux logo" width="200"/>
-  
-  **A minimal experimental language for learning purposes**
-</div>
+![minilux logo](minilux.png)
 
 ---
 
@@ -22,41 +18,50 @@ Minilux is a minimal language designed for simplicity and learning. It features:
 
 ## Quick Start
 
-### Prerequisites
+### Building from Source:
 
-To build minilux from source, you need:
+To build minilux from source, you need the **Rust toolchain** (cargo + rustc)
 
-- **Rust toolchain** (cargo + rustc)
-
-Install on Debian/Ubuntu:
-```sh
+Install on Debian/Ubuntu/GoldenDog:
+```
 sudo apt install cargo
 ```
 
-Install on other systems:
-```sh
+Fedora:
+```
+sudo dnf install rust cargo
+```
+
+macOS (via [homebrew](https://brew.sh))
+```
+brew install rust # this installs both rustc and cargo
+```
+
+Other systems:
+```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### Build
 
-```sh
-make
 ```
-
-Or use Cargo directly:
-
-```sh
-cargo build --release
+make  
 ```
 
 ### Install
 
-```sh
+```
 make install
 ```
 
 This installs `minilux` to `/usr/bin`, allowing you to run scripts directly with a shebang.
+
+To uninstall run ```make uninstall``
+
+### Rebuild
+remove the target/ dir completely (```rm -rf target/```), and then:
+
+```make uninstall; make clean; make```
 
 ### Run an Example
 
